@@ -1,4 +1,4 @@
-class FfmpegBuilder {
+export class FfmpegBuilder {
 	private inputPath: string
 	private options: Map<string, string> = new Map()
 	private outputPath: string
@@ -28,6 +28,6 @@ class FfmpegBuilder {
 
 		res.push(outputPath)
 
-		
+		return res
 	}
 }

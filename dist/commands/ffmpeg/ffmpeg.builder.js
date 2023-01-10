@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FfmpegBuilder = void 0;
 class FfmpegBuilder {
     constructor() {
         this.options = new Map();
@@ -20,9 +22,8 @@ class FfmpegBuilder {
             res.push(key);
             res.push(value);
         });
-        res.push(this.inputPath + outputPath);
-        return res.join(' ');
+        res.push(outputPath);
+        return res;
     }
 }
-const service = new FfmpegBuilder();
-console.log(service.input('/').resolution(1920, 1080).output('res.mp4'));
+exports.FfmpegBuilder = FfmpegBuilder;

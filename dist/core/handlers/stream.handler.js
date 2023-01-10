@@ -5,7 +5,7 @@ class StreamHandler {
     constructor(logger) {
         this.logger = logger;
     }
-    proccessOut(stream) {
+    processOut(stream) {
         stream.stdout.on('data', (data) => {
             this.logger.log(data);
         });
